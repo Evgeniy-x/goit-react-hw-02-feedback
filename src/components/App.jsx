@@ -1,10 +1,10 @@
-import React from 'react';
+import { Component } from 'react';
 import Section from './Feedback/Section.jsx';
 import FeedbackOptions from './Feedback/FeedbackOptions.jsx';
 import Statistics from './Feedback/Statistics.jsx';
 import Notification from './Feedback/Notification.jsx';
 
-export class App extends React.Component {
+export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -14,7 +14,6 @@ export class App extends React.Component {
   handleIncrease = e => {
     const current = e.target.name;
     this.setState(prevState => {
-      console.log(this.state);
       return { [current]: prevState[current] + 1 };
     });
   };
