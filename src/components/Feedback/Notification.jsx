@@ -1,3 +1,5 @@
-export default ({ message }) => {
+const Notification = ({ message }) => {
   return <p>{message}</p>;
 };
+
+export default Notification;
